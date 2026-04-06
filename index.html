@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BHD Packagings - Premium LLDPE Poly Bags & Packaging Solutions</title>
+  <meta name="description" content="BHD Packagings Private Limited delivers premium-quality LLDPE poly bags and custom packaging solutions for industrial, food, and retail businesses.">
+  <style>
+    :root {
+      --bg: #f8fbff;
+      --surface: rgba(255, 255, 255, 0.84);
+      --surface-solid: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe5f3;
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --teal: #0f766e;
+      --purple: #7c3aed;
+      --accent: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+      --accent-alt: linear-gradient(135deg, #059669 0%, #0f766e 100%);
+      --shadow: 0 24px 80px rgba(37, 99, 235, 0.12);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 30%),
+        radial-gradient(circle at top right, rgba(124, 58, 237, 0.08), transparent 26%),
+        linear-gradient(180deg, #f8fbff 0%, #f4f8ff 42%, #ffffff 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.82);
+      border-bottom: 1px solid rgba(219, 229, 243, 0.9);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      gap: 20px;
+    }
+
+    .brand img {
+      height: 44px;
+      width: auto;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      padding: 10px 14px;
+      color: var(--muted);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .menu a:hover,
+    .menu a.active {
+      background: #eaf1ff;
+      color: var(--blue);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
+    .btn-secondary { background: #fff; color: var(--text); border: 1px solid var(--line); }
+    .btn-green { background: var(--accent-alt); color: #fff; box-shadow: 0 20px 60px rgba(15, 118, 110, 0.18); }
+
+    .hero {
+      padding: 60px 0 42px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 18px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.12);
+    }
+
+    h1, h2, h3, h4, p { margin-top: 0; }
+    .hero h1 {
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 0.96;
+      margin-bottom: 18px;
+      letter-spacing: -0.04em;
+    }
+
+    .gradient-text {
+      background: var(--accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .stats-inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .stats-inline span::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      vertical-align: middle;
+    }
+
+    .hero-visual,
+    .about-visual {
+      position: relative;
+    }
+
+    .card-image {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .card-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .floating-badge {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(219, 229, 243, 0.9);
+      border-radius: 20px;
+      padding: 16px 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+      min-width: 185px;
+    }
+
+    .floating-badge small {
+      display: block;
+      color: #64748b;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .floating-top { top: -20px; left: -16px; }
+    .floating-bottom { right: -14px; bottom: -24px; }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 44px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.8;
+    }
+
+    .ribbon {
+      padding: 28px 0;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+    }
+
+    .ribbon-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .ribbon-item {
+      padding: 18px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .ribbon-item strong {
+      display: block;
+      font-size: 1.9rem;
+      color: #60a5fa;
+      margin-bottom: 8px;
+    }
+
+    .feature-grid,
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .feature-card,
+    .service-card,
+    .contact-card,
+    .form-card {
+      background: var(--surface-solid);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.06);
+    }
+
+    .feature-card {
+      padding: 28px;
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(124, 58, 237, 0.12));
+    }
+
+    .feature-card p,
+    .service-card p,
+    .about-copy p,
+    .contact-card p,
+    .contact-card li {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .about-copy .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 26px 0 32px;
+    }
+
+    .mini-item {
+      padding: 18px;
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+    }
+
+    .mini-item h4 {
+      margin-bottom: 8px;
+      font-size: 1.02rem;
+    }
+
+    .services {
+      background: linear-gradient(180deg, #f7fafc 0%, #effcf9 100%);
+    }
+
+    .service-card {
+      overflow: hidden;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .service-body {
+      padding: 24px;
+    }
+
+    .service-tag {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .tag-pink { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+    .tag-gold { background: linear-gradient(135deg, #f59e0b, #f97316); }
+    .tag-green { background: linear-gradient(135deg, #10b981, #14b8a6); }
+
+    .contact-grid {
+      align-items: stretch;
+    }
+
+    .contact-card,
+    .form-card {
+      padding: 30px;
+      height: 100%;
+    }
+
+    .contact-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-card li strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 14px;
+      border: 1px solid #cbd5e1;
+      font: inherit;
+      color: var(--text);
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .footer {
+      padding: 30px 0 44px;
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer strong { color: #fff; }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .feature-grid,
+      .service-grid,
+      .ribbon-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .floating-top,
+      .floating-bottom {
+        position: static;
+        margin-top: 18px;
+      }
+
+      .form-row,
+      .about-copy .mini-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="BHD Packagings home">
+        <img src="assets/logo.png" alt="BHD Packagings Private Limited logo">
+      </a>
+      <nav class="menu" aria-label="Primary navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="#contact">Get Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">
+            <span class="dot"></span>
+            Premium LLDPE Packaging Solutions
+          </div>
+          <h1>
+            <span class="gradient-text">BHD Packagings</span><br>
+            <span style="font-size: 0.54em; line-height: 1.2; color: #475569;">Private Limited</span>
+          </h1>
+          <p>
+            Crafting premium-quality LLDPE poly bags for industrial excellence. This static local version mirrors the current
+            `bhdpackagings.com` homepage so you can review it locally and deploy it on a simpler hosting setup if needed.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">Explore Products</a>
+            <a class="btn btn-secondary" href="#contact">Get a Quote</a>
+          </div>
+          <div class="stats-inline">
+            <span>500+ Happy Clients</span>
+            <span>0% Complaint Rate</span>
+            <span>Premium Quality Focus</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="card-image">
+            <img src="assets/hero.png" alt="BHD Packagings premium quality products">
+          </div>
+          <div class="floating-badge floating-top">
+            <strong>0% Complaint Rate</strong>
+            <small>Perfect quality commitment</small>
+          </div>
+          <div class="floating-badge floating-bottom">
+            <strong>500+ Clients</strong>
+            <small>Trusted packaging partners</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ribbon">
+      <div class="container ribbon-grid">
+        <div class="ribbon-item"><strong>500+</strong>Businesses Served</div>
+        <div class="ribbon-item"><strong>15+</strong>Years of Industry Experience</div>
+        <div class="ribbon-item"><strong>0%</strong>Complaint Goal</div>
+        <div class="ribbon-item"><strong>Custom</strong>LLDPE Solutions</div>
+        <div class="ribbon-item"><strong>India</strong>Manufacturing Base</div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="card-image">
+            <img src="assets/about.png" alt="BHD Packaging facility and team">
+          </div>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow" style="background: rgba(16, 185, 129, 0.10); color: var(--teal);">
+            About BHD Packaging
+          </div>
+          <h2>We take responsibility for your products</h2>
+          <p>
+            At BHD Packaging, the focus is durability, reliability, sustainability, and presentation. The company supports
+            packaging requirements across industries while keeping quality standards high and production practical.
+          </p>
+          <div class="mini-grid">
+            <div class="mini-item">
+              <h4>Quality Assurance</h4>
+              <p>Strong, dependable packaging made for real operational use.</p>
+            </div>
+            <div class="mini-item">
+              <h4>Sustainability</h4>
+              <p>Eco-conscious material choices and responsible manufacturing.</p>
+            </div>
+            <div class="mini-item">
+              <h4>Industry Expertise</h4>
+              <p>Experience-backed guidance for custom packaging needs.</p>
+            </div>
+            <div class="mini-item">
+              <h4>Customer Focus</h4>
+              <p>Your products are treated with the same care as their own.</p>
+            </div>
+          </div>
+          <a class="btn btn-green" href="#contact">Learn More About Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Why Businesses Choose BHD</div>
+          <h2>Premium packaging with practical business value</h2>
+          <p>
+            This local static version keeps the same positioning as the current live site while making the homepage easy to host on
+            Vercel, GoDaddy static hosting, or any standard cPanel environment.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">ðŸ›¡</div>
+            <h3>Reliable Product Protection</h3>
+            <p>LLDPE poly bags designed to support industrial handling, storage, and shipping with dependable strength.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">âš™</div>
+            <h3>Custom Manufacturing Support</h3>
+            <p>Packaging can be tailored around product dimensions, use cases, and customer-specific requirements.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">ðŸŒ¿</div>
+            <h3>Sustainable Approach</h3>
+            <p>Material and process choices are aligned toward more responsible packaging production.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">ðŸ­</div>
+            <h3>Industrial-Grade Quality</h3>
+            <p>Built for manufacturers, suppliers, and brands that need packaging to perform consistently.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">ðŸ¤</div>
+            <h3>Long-Term Client Trust</h3>
+            <p>The site messaging highlights a strong service track record and a client-first relationship model.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">ðŸ“¦</div>
+            <h3>Packaging Across Use Cases</h3>
+            <p>Suitable for beauty, food, labeling, and broader packaging workflows shown on the live website.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow" style="background: rgba(16, 185, 129, 0.10); color: var(--teal);">What We Offer</div>
+          <h2>Innovative and creative packaging solutions</h2>
+          <p>These cards are rebuilt from the current live homepage so the local site feels close to what is already online.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <img src="assets/health-beauty.jpg" alt="Health and beauty packaging">
+            <div class="service-body">
+              <span class="service-tag tag-pink">Health & Beauty</span>
+              <h3>Health & Beauty Packaging</h3>
+              <p>Durable and attractive packaging for cosmetics, wellness products, and beauty-focused brands.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img src="assets/food.png" alt="Food packaging">
+            <div class="service-body">
+              <span class="service-tag tag-gold">Food Packaging</span>
+              <h3>Food Packaging</h3>
+              <p>Packaging options that balance safety, freshness, and a strong shelf-ready presentation.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img src="assets/decorating-labeling.jpg" alt="Decorating and labeling">
+            <div class="service-body">
+              <span class="service-tag tag-green">Labeling & Finish</span>
+              <h3>Decorating and Labeling</h3>
+              <p>Solutions that improve branding, visibility, and consistency across packaged products.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <div class="eyebrow">Contact BHD Packagings</div>
+          <h2>Request packaging details or a quote</h2>
+          <p>
+            The original live site has an interactive form inside a Next.js app. In this static version, the form opens an email draft,
+            which is much easier to host on basic shared hosting.
+          </p>
+          <ul>
+            <li>
+              <strong>Address</strong>
+              Plot no: 536 Sector-8 IMT Manesar, Gurugram, Haryana-122050, India
+            </li>
+            <li>
+              <strong>Phone</strong>
+              +91 87084 70954, +91 99990 04889
+            </li>
+            <li>
+              <strong>Email</strong>
+              bhdpackagings@gmail.com
+            </li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <form id="quoteForm">
+            <div class="form-row">
+              <div>
+                <label for="name">Your Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
+              <div>
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" placeholder="Company name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="your@email.com" required>
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="Your phone number" required>
+              </div>
+            </div>
+            <div>
+              <label for="packaging">Packaging Type</label>
+              <input id="packaging" name="packaging" type="text" placeholder="e.g. Industrial Poly Bags, Food Grade Bags">
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your packaging requirements..." required></textarea>
+            </div>
+            <button class="btn btn-green" type="submit">Send Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>BHD Packagings Private Limited</strong> | Static local homepage prepared for simple deployment.</p>
+      <p>&copy; 2026 BHD Packagings. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("quoteForm");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const data = new FormData(form);
+      const subject = encodeURIComponent("BHD Packagings Quote Request");
+      const body = encodeURIComponent(
+        "Name: " + (data.get("name") || "") + "\n" +
+        "Company: " + (data.get("company") || "") + "\n" +
+        "Email: " + (data.get("email") || "") + "\n" +
+        "Phone: " + (data.get("phone") || "") + "\n" +
+        "Packaging Type: " + (data.get("packaging") || "") + "\n\n" +
+        "Message:\n" + (data.get("message") || "")
+      );
+
+      window.location.href = "mailto:bhdpackagings@gmail.com?subject=" + subject + "&body=" + body;
+    });
+  </script>
+</body>
+</html>
