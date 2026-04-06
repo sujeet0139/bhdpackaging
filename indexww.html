@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testolia | Secure Online Exam Platform for Colleges & Coaching Institutes</title>
+  <meta name="description" content="Testolia by NexoraTech helps colleges, schools, and coaching institutes run secure online exams with proctoring, fast setup, analytics, and reliable support." />
+  <meta name="keywords" content="online exam software india, AI proctoring system, testolia, online test platform, exam management system, coaching institute exam software, college online exam platform" />
+  <meta name="robots" content="index, follow" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#003087', light: '#1565C0', dark: '#001f5b' },
+            accent:  { DEFAULT: '#FF6B35', dark: '#e05520' },
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="//fonts.googleapis.com" />
+  <link href="//fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    @keyframes pulse-anim { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
+    .pulse { animation: pulse-anim 2s infinite; }
+
+    #navbar { transition: box-shadow .3s, padding .3s; }
+    #navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.08); padding-top: 10px !important; padding-bottom: 10px !important; }
+
+    #mobileMenu { display: none; }
+    #mobileMenu.open { display: flex; }
+    #scrollTop { display: none; }
+    #scrollTop.visible { display: flex; }
+
+    .feat-bar { position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 12px 12px 0 0; }
+
+    .step-line::after {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(50% + 36px);
+      width: calc(100% - 72px);
+      height: 2px;
+      background: #e2e8f0;
+    }
+    @media (max-width: 1023px) { .step-line::after { display: none; } }
+  </style>
+</head>
+<body class="text-gray-700 bg-white">
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4 bg-white border-b border-gray-100">
+  <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <a href="../index.html" class="text-gray-400 text-sm hover:text-primary transition-all no-underline font-medium">â† NexoraTech</a>
+      <span class="text-gray-200">|</span>
+      <a href="#" class="text-[1.3rem] font-black text-primary no-underline tracking-tight">
+        Testo<span class="text-accent">lia</span>
+      </a>
+    </div>
+    <ul class="hidden lg:flex items-center gap-1 list-none m-0 p-0">
+      <li><a href="#features"     class="text-gray-600 text-sm font-medium px-3.5 py-2 rounded-md hover:text-primary hover:bg-blue-50 transition-all no-underline">Features</a></li>
+      <li><a href="#how-it-works" class="text-gray-600 text-sm font-medium px-3.5 py-2 rounded-md hover:text-primary hover:bg-blue-50 transition-all no-underline">How It Works</a></li>
+      <li><a href="#pricing"      class="text-gray-600 text-sm font-medium px-3.5 py-2 rounded-md hover:text-primary hover:bg-blue-50 transition-all no-underline">Pricing</a></li>
+      <li><a href="#demo"         class="text-gray-600 text-sm font-medium px-3.5 py-2 rounded-md hover:text-primary hover:bg-blue-50 transition-all no-underline">Book Demo</a></li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <a href="#demo" class="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary-dark text-white text-sm font-semibold rounded-lg transition-all hover:-translate-y-0.5 no-underline shadow-sm">
+        Get Free Demo
+      </a>
+      <button id="burger" onclick="toggleMenu()" class="lg:hidden flex flex-col gap-1.5 p-1.5 bg-transparent border-0 cursor-pointer">
+        <span class="block w-6 h-0.5 bg-gray-700 rounded transition-all"></span>
+        <span class="block w-6 h-0.5 bg-gray-700 rounded transition-all"></span>
+        <span class="block w-6 h-0.5 bg-gray-700 rounded transition-all"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div id="mobileMenu" class="fixed inset-0 z-40 flex-col items-center justify-center gap-6 bg-white">
+  <button onclick="toggleMenu()" class="absolute top-6 right-6 text-gray-700 text-2xl bg-transparent border-0 cursor-pointer">âœ•</button>
+  <a href="#features"     onclick="toggleMenu()" class="text-primary text-xl font-bold hover:text-accent transition-all no-underline">Features</a>
+  <a href="#how-it-works" onclick="toggleMenu()" class="text-primary text-xl font-bold hover:text-accent transition-all no-underline">How It Works</a>
+  <a href="#pricing"      onclick="toggleMenu()" class="text-primary text-xl font-bold hover:text-accent transition-all no-underline">Pricing</a>
+  <a href="#demo" onclick="toggleMenu()" class="mt-2 px-8 py-3 bg-primary text-white font-bold rounded-lg no-underline">Get Free Demo</a>
+</div>
+<section id="hero" class="pt-20 pb-0 relative overflow-hidden" style="background: linear-gradient(160deg, #ffffff 0%, #f0f5ff 50%, #e8f0fe 100%);">
+  <div class="absolute top-20 right-0 w-96 h-96 rounded-full opacity-10 pointer-events-none" style="background:radial-gradient(circle,#003087,transparent);transform:translate(30%,-20%)"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10 pointer-events-none" style="background:radial-gradient(circle,#FF6B35,transparent);transform:translate(-30%,30%)"></div>
+  <div class="max-w-6xl mx-auto px-6 pt-16 pb-0 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-primary text-xs font-semibold px-4 py-1.5 rounded-full mb-5">
+          <span class="w-1.5 h-1.5 bg-green-500 rounded-full pulse"></span>
+          Secure Online Exam Platform
+        </div>
+        <h1 class="text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-5">
+          Run <span class="text-primary">secure online exams</span> at scale with smart proctoring and faster result delivery
+        </h1>
+        <p class="text-gray-500 text-lg max-w-xl mb-8 leading-relaxed">
+          Testolia is NexoraTech's intelligent online examination platform â€” built for schools, colleges, and coaching institutes. Tamper-proof exams with real-time AI monitoring.
+        </p>
+        <div class="flex flex-wrap gap-4 mb-10">
+          <a href="#demo" class="inline-flex items-center gap-2 px-7 py-3.5 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-all hover:-translate-y-0.5 hover:shadow-lg no-underline">
+            Book Free Demo
+          </a>
+          <a href="#features" class="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-gray-200 text-gray-700 font-semibold rounded-lg hover:border-primary hover:text-primary transition-all no-underline">
+            See Features
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-6">
+          <div class="text-center">
+            <strong class="block text-2xl font-black text-primary">500+</strong>
+            <span class="text-xs text-gray-400 font-medium">Institutions Supported</span>
+          </div>
+          <div class="w-px bg-gray-200"></div>
+          <div class="text-center">
+            <strong class="block text-2xl font-black text-primary">5L+</strong>
+            <span class="text-xs text-gray-400 font-medium">Exam Attempts Managed</span>
+          </div>
+          <div class="w-px bg-gray-200"></div>
+          <div class="text-center">
+            <strong class="block text-2xl font-black text-primary">99.9%</strong>
+            <span class="text-xs text-gray-400 font-medium">Platform Reliability</span>
+          </div>
+          <div class="w-px bg-gray-200"></div>
+          <div class="text-center">
+            <strong class="block text-2xl font-black text-primary">24/7</strong>
+            <span class="text-xs text-gray-400 font-medium">Support</span>
+          </div>
+        </div>
+      </div>
+      <div class="hidden lg:block">
+        <div class="bg-white border border-gray-200 rounded-2xl p-7 shadow-xl">
+          <div class="flex items-center justify-between mb-5">
+            <span class="text-xs text-gray-400 uppercase tracking-widest font-semibold">Why Institutions Choose Testolia</span>
+            <span class="inline-flex items-center gap-1.5 text-xs text-green-600 font-semibold bg-green-50 px-2.5 py-1 rounded-full">
+              <span class="w-1.5 h-1.5 bg-green-500 rounded-full pulse"></span> Live
+            </span>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 bg-blue-50 rounded-xl px-4 py-3 border border-blue-100">
+              <div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center text-lg flex-shrink-0">ðŸ¤–</div>
+              <div>
+                <div class="text-sm font-semibold text-gray-800">AI Face Detection</div>
+                <div class="text-xs text-gray-500">Flags suspicious behavior and identity mismatch</div>
+              </div>
+              <span class="ml-auto text-xs bg-primary text-white px-2 py-0.5 rounded font-medium">Active</span>
+            </div>
+            <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3">
+              <div class="w-9 h-9 bg-purple-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">ðŸ“‹</div>
+              <div>
+                <div class="text-sm font-semibold text-gray-800">Smart Question Bank</div>
+                <div class="text-xs text-gray-500">MCQ, subjective â€” randomized per student</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3">
+              <div class="w-9 h-9 bg-green-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">âš¡</div>
+              <div>
+                <div class="text-sm font-semibold text-gray-800">Instant Auto-Grading</div>
+                <div class="text-xs text-gray-500">Publish scores faster and reduce manual effort</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3">
+              <div class="w-9 h-9 bg-yellow-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">ðŸ”’</div>
+              <div>
+                <div class="text-sm font-semibold text-gray-800">Secure Exam Controls</div>
+                <div class="text-xs text-gray-500">Reduce cheating with tab, copy, and screen restrictions</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3">
+              <div class="w-9 h-9 bg-cyan-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">ðŸ“Š</div>
+              <div>
+                <div class="text-sm font-semibold text-gray-800">Analytics Dashboard</div>
+                <div class="text-xs text-gray-500">Track toppers, pass rates, and performance trends</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full mt-16" style="line-height:0">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:60px">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#1e293b"/>
+    </svg>
+  </div>
+</section>
+<div class="bg-slate-800 py-5">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-wrap items-center justify-center">
+      <div class="flex items-center gap-3.5 px-8 py-3 border-r border-white/10">
+        <span class="text-3xl font-black text-accent">500+</span>
+        <span class="text-xs text-white/55 font-medium leading-snug max-w-[90px]">Institutions Using</span>
+      </div>
+      <div class="flex items-center gap-3.5 px-8 py-3 border-r border-white/10">
+        <span class="text-3xl font-black text-accent">5L+</span>
+        <span class="text-xs text-white/55 font-medium leading-snug max-w-[90px]">Exam Attempts Managed</span>
+      </div>
+      <div class="flex items-center gap-3.5 px-8 py-3 border-r border-white/10">
+        <span class="text-3xl font-black text-accent">10K+</span>
+        <span class="text-xs text-white/55 font-medium leading-snug max-w-[90px]">Students Daily</span>
+      </div>
+      <div class="flex items-center gap-3.5 px-8 py-3 border-r border-white/10">
+        <span class="text-3xl font-black text-accent">99.9%</span>
+        <span class="text-xs text-white/55 font-medium leading-snug max-w-[90px]">Uptime Guarantee</span>
+      </div>
+      <div class="flex items-center gap-3.5 px-8 py-3">
+        <span class="text-3xl font-black text-accent">24/7</span>
+        <span class="text-xs text-white/55 font-medium leading-snug max-w-[90px]">Support Available</span>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="features" class="bg-white" style="padding-top:5.5rem;padding-bottom:5.5rem">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14 fade-up">
+      <span class="inline-block bg-blue-50 text-primary text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-3 border border-blue-100">Platform Features</span>
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900">Everything You Need to Run Exams at Scale</h2>
+      <p class="text-gray-500 mt-3 text-lg max-w-xl mx-auto">From question creation to result analytics â€” Testolia handles the entire exam lifecycle.</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
